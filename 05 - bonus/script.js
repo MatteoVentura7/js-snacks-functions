@@ -6,13 +6,31 @@ e buonasera se è sera (oltre le 17)
 */
 
 const name = 'Mario';
+const name2 = (prompt("inserisci il tuo nome"))
 
 
 // Dichiara la funzione qui.
 
+function saluto(utente){
+
+    const oraCorrente = new Date().getHours();
+    let mex;
+
+    if(oraCorrente < 13){
+        mex='Buongiorno'
+    }
+    else if(oraCorrente < 17){
+        mex='Buon pommeriggio'
+    }
+    else{   
+        mex='Buonasera'  
+    }
+    return `${mex} ${utente}`;
+ }
 
 // Invoca la funzione qui e stampa il risultato in console
 
-
+console.log(saluto(name));
+console.log(saluto(name2));
 
 //Risultato atteso se si passa 'Mario' alle 18: // Buonasera Mario.
